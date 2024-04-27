@@ -32,11 +32,15 @@ func Index(cfg model.Config) templ.Component {
 				templ_7745c5c3_Buffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"w-full\">")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
 			templ_7745c5c3_Err = component.Sidebar(cfg).Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <main class=\"border-t border-slate-200 lg:relative lg:mb-28 lg:ml-112 lg:border-t-0 xl:ml-120\"><div class=\"relative\"><div class=\"pb-12 pt-16 sm:pb-4 lg:pt-12\"><div class=\"lg:px-8\"><div class=\"lg:max-w-4xl\"><div class=\"mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0\"><h1 class=\"text-2xl font-bold leading-7 text-slate-900\">Episodes</h1></div></div></div><div class=\"divide-y divide-slate-100 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-100\"></div></div></div></main>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<main class=\"border-t border-slate-200 lg:relative lg:mb-28 lg:ml-112 lg:border-t-0 xl:ml-120\"><div class=\"relative\"><div class=\"pb-12 pt-16 sm:pb-4 lg:pt-12\"><div class=\"lg:px-8\"><div class=\"lg:max-w-4xl\"><div class=\"mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0\"><h1 class=\"text-2xl font-bold leading-7 text-slate-900\">Episodes</h1></div></div></div><div class=\"divide-y divide-slate-100 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-100\"></div></div></div></main></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
