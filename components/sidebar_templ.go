@@ -38,14 +38,14 @@ func Sidebar(cfg model.Config) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span></div><div class=\"relative z-10 mx-auto px-4 pb-4 pt-10 sm:px-6 md:max-w-2xl md:px-4 lg:min-h-full lg:flex-auto lg:border-x lg:border-slate-200 lg:px-8 lg:py-12 xl:px-12\"><a class=\"relative mx-auto block w-48 overflow-hidden rounded-lg bg-slate-200 shadow-xl shadow-slate-200 sm:w-64 sm:rounded-xl lg:w-auto lg:rounded-2xl\" aria-label=\"Homepage\" href=\"/\"><img alt=\"\" fetchpriority=\"high\" width=\"960\" height=\"960\" decoding=\"async\" data-nimg=\"1\" class=\"w-full\" style=\"color:transparent\" sizes=\"(min-width: 1024px) 20rem, (min-width: 640px) 16rem, 12rem\" srcset=\"\" src=\"")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span></div><div class=\"relative z-10 mx-auto px-4 pb-4 pt-10 sm:px-6 md:max-w-2xl md:px-4 lg:min-h-full lg:flex-auto lg:border-x lg:border-slate-200 lg:px-8 lg:py-12 xl:px-12\"><a class=\"relative mx-auto block w-48 overflow-hidden rounded-lg bg-slate-200 shadow-xl shadow-slate-200 sm:w-64 sm:rounded-xl lg:w-auto lg:rounded-2xl\" aria-label=\"Homepage\" href=\"/\"><img alt=\"\" fetchpriority=\"high\" width=\"400\" height=\"400\" decoding=\"async\" data-nimg=\"1\" class=\"w-full\" style=\"color:transparent\" srcset=\"\" src=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var3 string
 		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(cfg.ImgUrl)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `components/sidebar.templ`, Line: 13, Col: 230}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `components/sidebar.templ`, Line: 13, Col: 163}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 		if templ_7745c5c3_Err != nil {
@@ -90,7 +90,7 @@ func Sidebar(cfg model.Config) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p><button type=\"button\" class=\"mt-2 hidden text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 lg:inline-block\">Show more</button></section><section class=\"mt-10 lg:mt-12\"><h2 class=\"sr-only flex items-center font-mono text-sm font-medium leading-7 text-slate-900 lg:not-sr-only\"><div class=\"h-2.5 w-2.5 bg-indigo-300\"></div><span class=\"ml-2.5\">Listen</span></h2><div class=\"h-px bg-gradient-to-r from-slate-200/0 via-slate-200 to-slate-200/0 lg:hidden\"></div><ul role=\"list\" class=\"mt-4 flex justify-center gap-10 text-base font-medium leading-7 text-slate-700 sm:gap-8 lg:flex-col lg:gap-4\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></section><section class=\"mt-10 lg:mt-12\"><h2 class=\"sr-only flex items-center font-mono text-sm font-medium leading-7 text-slate-900 lg:not-sr-only\"><div class=\"h-2.5 w-2.5 bg-indigo-300\"></div><span class=\"ml-2.5\">Listen</span></h2><div class=\"h-px bg-gradient-to-r from-slate-200/0 via-slate-200 to-slate-200/0 lg:hidden\"></div><ul role=\"list\" class=\"mt-4 flex justify-center gap-10 text-base font-medium leading-7 text-slate-700 sm:gap-8 lg:flex-col lg:gap-4\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

@@ -1,7 +1,9 @@
 package server
 
 import (
+	"fmt"
 	"net/http"
+	"podcaster/config"
 	"podcaster/internal/handlers"
 	"podcaster/internal/repository"
 	"podcaster/pkg/logger"
@@ -11,10 +13,9 @@ import (
 )
 
 func Start() {
-
 	log := logger.New()
-
 	db, err := postgres.New(*log)
+	port := fmt.Sprintf(":%d", config.AppConfig.Port)
 
 	if err != nil {
 		log.Fatal().Err(err).Msg("Error while connecting to database")
@@ -31,6 +32,6 @@ func Start() {
 		http.StripPrefix("/public/", http.FileServer(http.Dir("public"))),
 	)
 
-	log.Info().Msgf("Listening on %v\n", "localhost:8080")
-	http.ListenAndServe(":8080", router)
+	log.Info().Msgf("Listening on port %v\n", port)
+	http.ListenAndServe(port, router)
 }

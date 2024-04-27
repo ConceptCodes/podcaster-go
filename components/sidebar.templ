@@ -10,7 +10,7 @@ templ Sidebar(cfg model.Config) {
     </div>
     <div class="relative z-10 mx-auto px-4 pb-4 pt-10 sm:px-6 md:max-w-2xl md:px-4 lg:min-h-full lg:flex-auto lg:border-x lg:border-slate-200 lg:px-8 lg:py-12 xl:px-12">
       <a class="relative mx-auto block w-48 overflow-hidden rounded-lg bg-slate-200 shadow-xl shadow-slate-200 sm:w-64 sm:rounded-xl lg:w-auto lg:rounded-2xl" aria-label="Homepage" href="/">
-        <img alt="" fetchpriority="high" width="960" height="960" decoding="async" data-nimg="1" class="w-full" style="color:transparent" sizes="(min-width: 1024px) 20rem, (min-width: 640px) 16rem, 12rem" srcset="" src={cfg.ImgUrl} />
+        <img alt="" fetchpriority="high" width="400" height="400" decoding="async" data-nimg="1" style="color:transparent" srcset="" src={cfg.ImgUrl} />
         <div class="absolute inset-0 rounded-lg ring-1 ring-inset ring-black/10 sm:rounded-xl lg:rounded-2xl"></div>
       </a>
       <div class="mt-10 text-center lg:mt-12 lg:text-left">
@@ -25,7 +25,6 @@ templ Sidebar(cfg model.Config) {
           <span class="ml-2.5">About</span>
         </h2>
         <p class="mt-2 text-base leading-7 text-slate-700 lg:line-clamp-4">{cfg.Desc}</p>
-        <button type="button" class="mt-2 hidden text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 lg:inline-block">Show more</button>
       </section>
       <section class="mt-10 lg:mt-12">
         <h2 class="sr-only flex items-center font-mono text-sm font-medium leading-7 text-slate-900 lg:not-sr-only">
