@@ -23,11 +23,10 @@ func Start() {
 	episodeRepo := repository.NewGormEpisodeRepository(db)
 
 	router := mux.NewRouter()
-	handler := handlers.New(&episodeRepo)
+	handler := handlers.New(episodeRepo)
 
 	router.HandleFunc("/", handler.HandleHome).Methods("GET")
 
-	// serve files in public
 	router.PathPrefix("/public/").Handler(
 		http.StripPrefix("/public/", http.FileServer(http.Dir("public"))),
 	)
